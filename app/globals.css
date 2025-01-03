@@ -1,42 +1,42 @@
 :root {
-  --background: #ffffff;
-  --foreground: #171717;
-}
+	--bg-general: #f6f6f6;
+	--bg-main: #e8e8e8;
+	--bg-accent: #7e847f;
+	--bg-dark: #5f6560;
+	--bg-light: #ffffff;
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
-  }
-}
+	--fill-star: #eea10c;
 
-html,
-body {
-  max-width: 100vw;
-  overflow-x: hidden;
-}
-
-body {
-  color: var(--foreground);
-  background: var(--background);
-  font-family: Arial, Helvetica, sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+	--color-main: #1b1b1b;
+	--color-secondary: rgba(27, 27, 27, 0.5);
+	--color-accent: #f6f6f6;
+	--color-selection: #7e847f;
+	--color-dark: #5f6560;
+	--color-light: rgba(246, 246, 246, 0.6);
+	--color-lighter: rgba(246, 246, 246, 0.4);
+	--color-lightest: rgba(246, 246, 246, 0.3);
 }
 
 * {
-  box-sizing: border-box;
-  padding: 0;
-  margin: 0;
+	box-sizing: border-box;
+	padding: 0;
+	margin: 0;
 }
 
 a {
-  color: inherit;
-  text-decoration: none;
+	display: block;
+	color: inherit;
+	line-height: 1;
+	text-decoration: none;
 }
 
-@media (prefers-color-scheme: dark) {
-  html {
-    color-scheme: dark;
-  }
+body {
+	color: var(--color-main);
+	background: var(--bg-general);
+	-webkit-font-smoothing: antialiased;
+	-moz-osx-font-smoothing: grayscale;
+}
+
+button {
+	cursor: pointer;
 }
