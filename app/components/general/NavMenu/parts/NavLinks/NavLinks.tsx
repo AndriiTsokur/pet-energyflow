@@ -3,7 +3,7 @@
 import { DetailedHTMLProps, HTMLAttributes, JSX } from 'react';
 import Link from 'next/link';
 import clsx from 'clsx';
-import styles from './Nav.module.css';
+import styles from './NavLinks.module.css';
 
 const links = [
 	{ name: 'Home', href: '/' },
@@ -16,7 +16,7 @@ interface PropsT
 	currentPage: string;
 }
 
-export default function Nav({
+export default function NavLinks({
 	closeMenu,
 	currentPage,
 	...props
