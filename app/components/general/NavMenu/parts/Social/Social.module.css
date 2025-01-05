@@ -28,3 +28,18 @@
 	height: 20px;
 	fill: currentColor;
 }
+
+@media screen and (min-width: 768px) {
+	.link {
+		width: 44px;
+		height: 44px;
+		border-color: var(--color-selection);
+		color: var(--color-selection);
+	}
+
+	.icon {
+		width: 28px;
+		height: 28px;
+		fill: currentColor;
+	}
+}

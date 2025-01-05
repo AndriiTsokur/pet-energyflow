@@ -4,10 +4,10 @@ import clsx from 'clsx';
 import styles from './Logo.module.css';
 
 interface PropsT extends Omit<LinkProps, 'href'> {
-	closeMenu: () => void;
+	closeMenu?: () => void;
 	colorLight?: boolean;
 	currentPage: string;
-	isMobileMenuVisible: boolean;
+	isMobileMenuVisible?: boolean;
 }
 
 export default function Logo({
@@ -18,7 +18,7 @@ export default function Logo({
 	...props
 }: PropsT): JSX.Element {
 	const handleClick = () => {
-		if (isMobileMenuVisible) closeMenu();
+		if (isMobileMenuVisible) closeMenu?.();
 	};
 
 	return (

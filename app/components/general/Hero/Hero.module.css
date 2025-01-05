@@ -49,3 +49,73 @@
 		background-image: url('/images/general/hero375w@2x.webp');
 	}
 }
+
+@media screen and (min-width: 768px) {
+	.hero {
+		flex-direction: row;
+	}
+
+	.picture {
+		width: 248px;
+		height: 900px;
+		margin-bottom: 0;
+		border-radius: 50px 0 50px 50px;
+		background-image: url('/images/general/hero768w.webp');
+		background-size: 248px 900px;
+	}
+
+	.motto {
+		width: 488px;
+		padding: 231px 32px 0;
+		border-radius: 0 50px 50px 50px;
+	}
+
+	.title {
+		margin-bottom: 25px;
+		font-size: 98px;
+		line-height: calc(98 / 95);
+	}
+
+	.text {
+		font-size: 18px;
+		line-height: calc(24 / 18);
+	}
+
+	@media (min-device-pixel-ratio: 2),
+		(-webkit-min-device-pixel-ratio: 2),
+		(min-resolution: 192dpi),
+		(min-resolution: 2dppx) {
+		.picture {
+			background-image: url('/images/general/hero768w@2x.webp');
+		}
+	}
+}
+
+@media screen and (min-width: 1440px) {
+	.picture {
+		width: 704px;
+		height: 884px;
+		background-image: url('/images/general/hero1440w.webp');
+		background-size: 704px 884px;
+	}
+
+	.motto {
+		width: 704px;
+		padding: 225px 32px 0;
+		border-radius: 0 50px 50px 50px;
+	}
+
+	.title {
+		font-size: 100px;
+		line-height: calc(115 / 100);
+	}
+
+	@media (min-device-pixel-ratio: 2),
+		(-webkit-min-device-pixel-ratio: 2),
+		(min-resolution: 192dpi),
+		(min-resolution: 2dppx) {
+		.picture {
+			background-image: url('/images/general/hero1440w@2x.webp');
+		}
+	}
+}

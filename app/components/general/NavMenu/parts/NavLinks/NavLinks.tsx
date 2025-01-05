@@ -12,7 +12,7 @@ const links = [
 
 interface PropsT
 	extends DetailedHTMLProps<HTMLAttributes<HTMLDivElement>, HTMLDivElement> {
-	closeMenu: () => void;
+	closeMenu?: () => void;
 	currentPage: string;
 }
 
@@ -29,7 +29,7 @@ export default function NavLinks({
 						key={name}
 						className={clsx(styles.item, currentPage === href && styles.active)}
 					>
-						<Link href={href} onClick={closeMenu}>
+						<Link href={href} onClick={() => closeMenu?.()}>
 							{name}
 						</Link>
 					</li>

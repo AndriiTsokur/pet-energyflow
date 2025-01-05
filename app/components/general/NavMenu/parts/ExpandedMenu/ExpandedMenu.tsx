@@ -5,27 +5,35 @@ import styles from './ExpandedMenu.module.css';
 
 interface PropsT
 	extends DetailedHTMLProps<HTMLAttributes<HTMLDivElement>, HTMLDivElement> {
-	closeMenu: () => void;
+	closeMenu?: () => void;
 	currentPage: string;
-	isMobileMenuVisible: boolean;
+	isMobile: boolean;
+	isMobileMenuVisible?: boolean;
+	scrollbarWidth: number;
 }
 
 export default function ExpandedMenu({
 	closeMenu,
 	currentPage,
+	isMobile,
 	isMobileMenuVisible,
+	scrollbarWidth,
 	...props
 }: PropsT): JSX.Element {
 	return (
-		<div className={styles.menu} {...props}>
+		<div
+			style={{ left: `calc(50% + ${scrollbarWidth / 2}px)` }}
+			className={styles.menu}
+			{...props}
+		>
 			<div className={styles.header}>
 				<Logo
 					closeMenu={closeMenu}
-					colorLight={true}
+					colorLight={isMobile}
 					currentPage={currentPage}
 					isMobileMenuVisible={isMobileMenuVisible}
 				/>
-				{isMobileMenuVisible && (
+				{isMobileMenuVisible && closeMenu && (
 					<button type='button' onClick={closeMenu} className={styles.button}>
 						{''}
 					</button>

@@ -9,3 +9,10 @@
 .light {
 	color: var(--color-accent);
 }
+
+@media screen and (min-width: 768px) {
+	.logo {
+		font-size: 28px;
+		line-height: 1;
+	}
+}

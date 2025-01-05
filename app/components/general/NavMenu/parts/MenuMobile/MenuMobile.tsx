@@ -8,6 +8,7 @@ interface PropsT
 	closeMenu: () => void;
 	openMenu: () => void;
 	isMobileMenuVisible: boolean;
+	scrollbarWidth: number;
 }
 
 export default function MenuMobile({
@@ -15,10 +16,15 @@ export default function MenuMobile({
 	closeMenu,
 	currentPage,
 	isMobileMenuVisible,
+	scrollbarWidth,
 	...props
 }: PropsT): JSX.Element {
 	return (
-		<div className={styles.wrapper} {...props}>
+		<div
+			style={{ left: `calc(50% + ${scrollbarWidth / 2}px)` }}
+			className={styles.wrapper}
+			{...props}
+		>
 			<Logo
 				closeMenu={closeMenu}
 				currentPage={currentPage}
