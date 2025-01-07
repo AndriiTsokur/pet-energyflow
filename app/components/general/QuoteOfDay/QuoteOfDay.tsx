@@ -1,4 +1,6 @@
-import { DetailedHTMLProps, HTMLAttributes, JSX } from 'react';
+import { DetailedHTMLProps, HTMLAttributes, JSX, Suspense } from 'react';
+import { QuoteOfDaySkeleton } from '@/app/ui';
+import { Quote } from './parts';
 import styles from './QuoteOfDay.module.css';
 
 interface PropsT
@@ -11,13 +13,9 @@ export default function QuoteOfDay({ ...props }: PropsT): JSX.Element {
 				<div className={styles.title_wrapper}>
 					<h2 className={styles.title}>Quote of the day</h2>
 				</div>
-				<p className={styles.text}>
-					A lot of times I find that people who are blessed with the most talent
-					don&apos;t ever develop that attitude, and the ones who aren&apos;t
-					blessed in that way are the most competitive and have the biggest
-					heart.
-				</p>
-				<p className={styles.author}>Tom Brady</p>
+				<Suspense fallback={<QuoteOfDaySkeleton />}>
+					<Quote />
+				</Suspense>
 			</div>
 		</section>
 	);

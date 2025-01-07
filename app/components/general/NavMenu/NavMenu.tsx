@@ -16,9 +16,13 @@ export default function NavMenu(): JSX.Element {
 			const screenWidth = window.innerWidth;
 			setIsMobile(screenWidth < 768);
 
-			setScrollbarWidth(
-				window.innerWidth - document.documentElement.clientWidth
-			);
+			if (screenWidth <= 390) {
+				setScrollbarWidth(
+					window.innerWidth - document.documentElement.clientWidth
+				);
+			} else {
+				setScrollbarWidth(0);
+			}
 		};
 
 		handleResize();
