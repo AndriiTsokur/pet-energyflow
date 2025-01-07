@@ -1,4 +1,5 @@
 import type { Metadata } from 'next';
+import clsx from 'clsx';
 import { dmSans } from '@/app/components/general';
 import './globals.css';
 import styles from './layout.module.css';
@@ -18,7 +19,7 @@ export default function RootLayout({
 }>) {
 	return (
 		<html lang='en'>
-			<body className={`${dmSans.className} antialiased`}>
+			<body className={clsx(`${dmSans.className} antialiased`, styles.body)}>
 				<div className={styles.container}>{children}</div>
 			</body>
 		</html>
