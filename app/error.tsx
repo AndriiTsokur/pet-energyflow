@@ -10,7 +10,9 @@ export default function Error({ error, reset }: ErrorProps) {
 		<>
 			<div>Something went wrong:</div>
 			<div>{JSON.stringify(error.message)}</div>
-			{/* <button onClick={() => reset()}>Try again</button> */}
+			<button type='reset' onClick={() => reset()}>
+				Try again
+			</button>
 		</>
 	);
 }
