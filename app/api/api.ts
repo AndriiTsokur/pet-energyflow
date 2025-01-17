@@ -25,7 +25,7 @@ const callRemoteApi = async ({
 	method = $METHODS.GET,
 }: CallRemoteApiProps) => {
 	try {
-		await new Promise((resolve) => setTimeout(resolve, 3_000));
+		// await new Promise((resolve) => setTimeout(resolve, 3_000));
 		const response = await fetch(endpoint, { method });
 
 		if (!response.ok) {

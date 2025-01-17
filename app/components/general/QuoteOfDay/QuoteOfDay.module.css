@@ -15,6 +15,7 @@
 }
 
 .quote {
+	min-height: 220px;
 	padding: 42px 20px;
 	border-radius: 30px;
 	background-color: var(--bg-accent);
